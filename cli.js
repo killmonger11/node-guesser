@@ -29,14 +29,35 @@ export async function main(argsArray) {
     }
   
     // we make sure the length of the arguments is exactly three
-    if (args.length > 3) {
-      errorLog(`only one argument can be accepted`)
+    if (args.length > 4) {
+      errorLog(`only two arguments can be accepted`)
       usage()
+    }
+
+    const guessme = function(argsArray) {
+        const guess = parseFloat(argsArray[3]);
+        const warning = chalk.hex('#FFA500');
+        const win = chalk.hex('#7be61a');
+
+        const correct = Math.round(Math.random() * 10)
+
+        if(Number.isNaN(guess)){ 
+            errorLog('give me numbers please')
+        }
+        if(guess === correct)
+        {
+            console.log(win('correct'))
+        }else{
+            console.log(warning('WRONG', correct))
+        }
     }
   
     switch(args[2]) {
         case 'help':
             usage()
+            break
+        case 'is-it':
+            guessme(args)
             break
         case 'new':
             break
