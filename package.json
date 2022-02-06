@@ -1,0 +1,28 @@
+{
+  "name": "guesser",
+  "version": "1.0.0",
+  "description": "my first nodejs app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "guess": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killmonger11/node-guesser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/killmonger11/node-guesser/issues"
+  },
+  "homepage": "https://github.com/killmonger11/node-guesser#readme",
+  "dependencies": {
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "chalk": "^4.0.0"
+  }
+}
